@@ -1,0 +1,21 @@
+#address{
+    vertical-align: left;
+}
+#exam{
+    word-spacing: 150px;
+}
+#ClassX,#ClassXII{
+    word-spacing: 50px;
+}
+#social,#science,#mathematics,#hindi,#english{
+    width:50px;
+    
+    
+}
+.marks{
+    word-spacing: 150px;
+}
+
+fieldset{
+    margin-bottom: 20px;
+}

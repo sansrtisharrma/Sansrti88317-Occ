@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Student Registration Form </title>
+        <link rel="stylesheet" href="css/StudentRegistration.css" type="text/css">
+    </head>
+    <body>
+        
+        <table align="center" cellpadding="10" id="table">
+            <center>
+                <h1>Student Registration Form</h1>
+                </center>
+            <tr>
+                <td >FIRST NAME:</td>
+                <td><input type="text"  data-bind="value:studentViewModel.firstname" placeholder="Enter your first name"></td>
+            </tr>
+            <tr>
+                <td>LAST NAME:</td>
+                <td><input type="text" data-bind="value:studentViewModel.lastname" placeholder="Enter your last name"></td>
+            </tr>
+            <tr>
+                <td>DATE OF BIRTH:</td>
+                <td><input type="date" data-bind="value:studentViewModel.dob"></td>
+            </tr>
+            <tr>
+                <td>EMAIL:</td>
+                <td><input data-bind="value:studentViewModel.email" type="email" placeholder="Enter your email"></td>
+            </tr>
+            <tr>
+                <td>MOBILE NUMBER:</td>
+                <td><input data-bind="value:studentViewModel.mobilenumber" type="number" placeholder="Enter your mobile number"></td>
+            </tr>
+            <tr>
+                <td>GENDER:</td>
+                <td><input type = "radio" name = "gender" value = "Male" data-bind = "checked: checkGender" /> Male<input type = "radio" name = "gender" value = "Female" data-bind = "checked: checkGender" /> Female</td>
+            </tr>
+            <tr>
+                <td>ADDRESS:</td>
+                <td><textarea rows="6" cols="50" id="address" data-bind = "textInput: address" placeholder="Enter your address"></textarea></td>
+            </tr>
+            <tr>
+                <td>CITY:</td>
+                <td><input data-bind="value:studentViewModel.city" type="text" placeholder="Enter the city name"></td>
+            </tr>
+            <tr>
+                <td>ZIP CODE:</td>
+                <td><input type="number" data-bind="value:studentViewModel.pincode" placeholder="Enter the Zip Code"></td>
+            </tr>
+            <tr>
+                <td>STATE:</td>
+                <td><select data-bind = " options: states,
+                    optionsCaption: 'Choose State...',
+                    value: selectedState,
+                    valueAllowUnset: true"></select></td>
+            </tr>
+            <tr>
+                <td>COUNTRY:</td>
+                <td>
+                    <select data-bind = " options: countries,
+                    optionsCaption: 'Choose Country...',
+                    value: selectedCountry,
+                    valueAllowUnset: true"></select>
+                </select>
+            </td>
+            </tr>
+            <tr>
+                <td data-bind="visible: hobbies">HOBBIES:</td>
+                <td>Drawing<input type="checkbox" value="Drawing" data-bind="checked: activity" />Singing<input type="checkbox" value="Singing" data-bind="checked: activity" />Dancing<input type="checkbox" value="Dancing" data-bind="checked: activity" />
+                <br>
+                Others<input type="checkbox" value="Others" data-bind="checked: activity" />
+                </td>
+            </tr>
+            <br>
+                <td>COURSE APPLIED:</td>
+                <td>
+                    BCA<input type = "radio" name = "courseApplied" value = "BCA" data-bind = "checked: courseApplied" /> BSC<input type = "radio" name = "courseApplied" value = "BSC" data-bind = "checked: courseApplied" /> BCOM<input type = "radio" name = "courseApplied" value = "BCOM" data-bind = "checked: courseApplied" /> BA<input type = "radio" name = "courseApplied" value = "BA" data-bind = "checked: courseApplied" />  
+                </td>
+            </tr>
+           <tr>
+               <td>
+                
+                <input type="checkbox" data-bind = "checked: agreeFlag" >I here by agree that all the information published is correct
+                </td><td>
+                
+                    <button type="submit" id="btnInsert">SUBMIT</button>
+                    <button type="reset" onclick="resetFunction()">RESET</button>
+                
+            </td>
+           </tr>
+           <tr>
+               <td>
+                   <fieldset>
+                       <legend>Student Details:</legend>
+                       <div id="name"></div>
+                       <div id="db"></div>
+                       <div id="mail"></div>
+                       <div id="mobile"></div>
+                       <div id="gen"></div>
+                       <div id="add"></div>
+                       <div id="cty"></div>
+                       <div id="pcode"></div>
+                       <div id="st"></div>
+                       <div id="ct"></div>
+                       <div id="hobby"></div>
+                       <div id="course"></div>
+
+                   </fieldset>
+            
+               </td>
+               <td>
+                <button >EDIT</button>
+                   <button onclick="deleteFunction()">DELETE</button>
+               </td>
+           </tr>
+        </table>
+        <script src="http://ajax.aspnetcdn.com/ajax/knockout/knockout-3.0.0.js" type="text/javascript"></script>
+        <script src="https://cdn.jsdelivr.net/npm/knockout.validation@2.0.4/dist/knockout.validation.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        var studentViewModel={
+            firstname:ko.observable("").extend({ required: true,minLength: 3,maxLength: 12,
+                     pattern: {
+                          message: 'Hey this doesnt match my pattern',
+                          params: '[a-zA-Z].$'
+                     } }),
+            lastname:ko.observable("").extend({ required: true ,minLength: 3,maxLength: 12,
+                     pattern: {
+                          message: 'Hey this doesnt match my pattern',
+                          params: '[a-zA-Z].$'
+                     }}),
+            dob:ko.observable("").extend({ required: true }),
+            email:ko.observable("").extend({ email: true}),
+            mobilenumber:ko.observable("").extend({ required: true,maxLength:10 }),
+            checkGender :  ko.observable("Male").extend({ required: true }),
+            address:ko.observable(""),
+            city:ko.observable("").extend({ required: true }),
+            pincode:ko.observable("").extend({ required: true }),
+            states : ko.observableArray(['Delhi','Haryana','Punjab','Rajasthan','Maharashtra']),
+            selectedState : ko.observable(''),
+            countries : ko.observableArray(['India','Africa','America','Asia','Antartica']),
+            selectedCountry : ko.observable(''),
+            hobbies:ko.observable("true").extend({ required: true }),
+            activity:ko.observableArray(["Drawing","Singing","Dancing","Others"]),
+            courseApplied:ko.observable("BCA").extend({ required: true }),
+            agreeFlag:ko.observable("false").extend({ required: true })
+        };
+        ko.applyBindings(studentViewModel);
+        const btnInsert=document.getElementById("btnInsert");
+    
+        btnInsert.onclick=function(){
+
+            var result = ko.validation.group(studentViewModel, {deep: true});
+    if (result().length > 0) 
+    {
+        alert("Please fix all errors before preceding");
+        result.showAllMessages(true);
+
+        return false;
+    }
+
+            var jsData=ko.toJS(studentViewModel);
+            console.log(jsData);
+            localStorage.setItem('student',JSON.stringify(jsData));
+            var retrievedObject = localStorage.getItem('student');
+            document.getElementById('name').innerHTML="Name:"+jsData.firstname+" "+jsData.lastname;
+            document.getElementById('db').innerHTML="Date of Birth:"+jsData.dob;
+            document.getElementById('mail').innerHTML="Email:"+jsData.email;
+            document.getElementById('mobile').innerHTML="Mobile Number:"+jsData.mobilenumber;
+            document.getElementById('gen').innerHTML="Gender:"+jsData.checkGender;
+            document.getElementById('add').innerHTML="Address:"+jsData.address;
+            document.getElementById('cty').innerHTML="City:"+jsData.city;
+            document.getElementById('pcode').innerHTML="Pin Code:"+jsData.pincode;
+            document.getElementById('st').innerHTML="State:"+jsData.selectedState;
+            document.getElementById('ct').innerHTML="Country:"+jsData.selectedCountry;
+            document.getElementById('hobby').innerHTML="Hobbies:"+jsData.activity;
+            document.getElementById('course').innerHTML="Course Applied for:"+jsData.courseApplied;
+
+         }
+
+         function resetFunction() {
+            location.reload();
+         }
+
+         function deleteFunction(){
+            localStorage.clear()
+            location.reload();
+         }
+
+        </script>
+    </body>
+</html>
