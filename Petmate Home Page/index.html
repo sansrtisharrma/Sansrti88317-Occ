@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap Library -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <!-- Jquery Library-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Javascript Library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- External css -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;1,200;1,300&display=swap"
+        rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <!-- Javascript file -->
+    <script src="js/main.js"></script>
+    <title>Petmate Brand Official Website</title>
+</head>
+
+<body>
+    <!-- Header section for mobile -->
+    <div class="mobile-header">
+        <div class="hidden-lg">
+
+            <!-- Animated Sidenav -->
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" id="ipad-bar">&times;</a>
+                <span><a class="mobilemenu-login" id="bobile-sign-in">Sign In or Register</a></span>
+                <a href="#">Dogs</a>
+                <a href="#">Cats</a>
+                <a href="#">Birds & Small Pets</a>
+                <a href="#">Brands</a>
+                <a href="#">Education</a>
+                <a href="#">Careers</a>
+                <a href="#">Adapt A Pet</a>
+                <a href="#">Sign Up & Save</a>
+                <a href="#">Contact Us</a>
+            </div>
+
+            <!-- bar icon -->
+            <span class="col-xs-3 bar-icon" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+
+            <!-- Logo -->
+            <div class="col-xs-6 text-center ">
+                <a href="#"><img src="image\pet-logo.png" alt="petmate logo" class="text-center bar-icon"
+                        id="logo-mobile"></a>
+            </div>
+
+            <!-- cart section -->
+            <div class="col-xs-3 text-right bar-icon">
+                <div class="heading-cart cart-wrapper">
+                    <img src="https://www.petmate.com/file/general/Cart_16x16.svg" alt="cart-logo" id="ipad-cart">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Desktop header part -->
+    <div class="row header-pet">
+        <!-- Petmate Logo -->
+        <div class="col-md-4 hidden-xs hidden-md hidden-sm mobile-logo logo-wrapper" id="logo">
+            <a href="#"><img src="image\pet-logo.png" alt="petmate logo" class="img-responsive" id="logo-id"></a>
+        </div>
+
+        <!-- Search bar -->
+        <div class="col-md-6 hidden-xs hidden-md hidden-sm">
+            <div class="input-group">
+                <span class="searchIcon"></span>
+                <input type="text" class="form-control" placeholder="     Search pet products & education"
+                    id="txtSearch" />
+                <div class="input-group-btn  hidden-xs">
+                    <button class="btn btn-primary" type="submit">
+                        <span class="glyphicon glyphicon-arrow-right" id="arrow"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cart section -->
+        <div class="col-md-1 hidden-xs hidden-md hidden-sm">
+            <div class="heading-cart cart-wrapper">
+                <span class="cart"> 0 Items <img src="https://www.petmate.com/file/general/Cart_16x16.svg"
+                        alt="cart-logo">
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar creation -->
+    <nav id="nav-bg">
+        <div class="navbar-collapse hidden-xs hidden-md hidden-sm" id="nav-target">
+            <ul class="nav navbar-nav">
+                <li><a href="#">Dogs</a>
+                    <ul>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Gift Guides</a> </li>
+                        <li><a href="#">Apparel</a> </li>
+                        <li><a href="#">Goodie Box</a> </li>
+                        <li><a href="#">Pet Steps & Ramps</a> </li>
+                        <li><a href="#">Training Tools</a> </li>
+                        <li><a href="#">Bedding</a> </li>
+                        <li><a href="#">Blankets</a> </li>
+                        <li><a href="#">Elevated Beds</a> </li>
+                        <li><a href="#">Furniture</a> </li>
+                        <li><a href="#">Kennel Mats</a> </li>
+                        <li><a href="#">Lounger Beds</a> </li>
+                        <li><a href="#">Orthopedic Beds</a> </li>
+                        <li><a href="#">Outdoor Beds</a> </li>
+                        <li><a href="#">Pillow Beds</a> </li>
+                        <li><a href="#">Shaped & Bolster Beds</a> </li>
+                        <li><a href="#">Collars & Leashes</a> </li>
+                        <li><a href="#">Collars</a> </li>
+                        <li><a href="#">Harnesses</a> </li>
+                        <li><a href="#">Leads</a> </li>
+                        <li><a href="#">Leashes</a> </li>
+                        <li><a href="#">Retractables</a> </li>
+                        <li><a href="#">Tieouts & Cables</a> </li>
+                     </ul>
+                     
+                </li>
+                <li><a href="#">Cats</a>
+                    <ul>
+                        <li><a href="#">Gift Guides</a></li>
+                        <li><a href="#">Accessoriess</a> </li>
+                        <li><a href="#">Catnip</a> </li>
+                        <li><a href="#">Goodie Box</a> </li>
+                        <li><a href="#"> Bedding</a> </li>
+                        <li><a href="#">Bolster Beds</a> </li>
+                        <li><a href="#">Cave Beds</a> </li>
+                        <li><a href="#">Kennel Mats</a> </li>
+                        <li><a href="#">Lounger Beds</a> </li>
+                        <li><a href="#">Orthopedic Beds</a> </li>
+                        <li><a href="#"> Collars & Leashes</a> </li>
+                        <li><a href="#">Collars</a> </li>
+                        <li><a href="#">Feeding & Watering</a> </li>
+                        <li><a href="#">Accessories</a> </li>
+                        <li><a href="#">Automatic Feeders</a> </li>
+                        <li><a href="#">Automatic Waterers</a> </li>
+                        <li><a href="#">Double Diners</a> </li>
+                        <li><a href="#">Food Storage</a> </li>
+                        <li><a href="#">Gravity Feeders</a> </li>
+                        <li><a href="#">Gravity Waterers</a> </li>
+                        <li><a href="#">Placemats</a> </li>
+                        <li><a href="#">Single Bowls</a> </li>
+                     </ul>
+                </li>
+                <li><a href="#">Birds & Small Pets</a>
+                    <ul>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Bird Baths</a> </li>
+                        <li><a href="#">Bird Perches</a> </li>
+                        <li><a href="#">Bird Swings</a> </li>
+                        <li><a href="#">Fish Supplies</a> </li>
+                        <li><a href="#">Feeding & Watering</a> </li>
+                        <li><a href="#">Feeders</a> </li>
+                        <li><a href="#">Food Storage</a> </li>
+                        <li><a href="#">Waterers</a> </li>
+                        <li><a href="#">Shelter</a> </li>
+                        <li><a href="#">Chicken Coops</a> </li>
+                        <li><a href="#">Toys</a> </li>
+                        <li><a href="#">Interactive Toys</a> </li>
+                        <li><a href="#">Mirror Toys</a> </li>
+                        <li><a href="#">Solo Play Toys</a> </li>
+                    </ul>
+                </li>
+                <li><a href="#">Brands</a></li>
+                <li><a href="#">Education</a></li>
+                <li><a href="#" id="text-red">Sale Items</a></li>
+                <li><a href="#">Adopt A Pet</a></li>
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">Sign Up & Save</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" class="nav-list">Help <img
+                            src="https://www.petmate.com/file/general/help_16x16.svg"></img></a></li>
+                <li><a href="#" class="nav-list">My Account <img
+                            src="https://www.petmate.com/file/general/myaccount_16x16.svg"></img></a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- hyperlink bar -->
+    <div id="header-carousel">
+        <a href="#" id="head-white"><b>FAST, FREE SHIPPING ON ORDERS $49+</b></a>
+    </div>
+
+    <!-- Carousel  Creation -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+        <!-- Indicators -->
+        <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+        </ol>
+
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                <img src="image/slide1.webp" alt="slide1" class="img-responsive">
+            </div>
+
+            <div class="item">
+                <img src="image/slide2.webp" alt="slide2" class="img-responsive">
+            </div>
+
+            <div class="item">
+                <img src="image/slide3.webp" alt="slide3" class="img-responsive">
+            </div>
+
+            <div class="item">
+                <img src="image/slide4.webp" alt="slide4" class="img-responsive">
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    <!-- 3 Image designing -->
+    <div class="row">
+        <div class="col-sm-4 head-img">
+            <img src="image/image1.jpg" alt="pic1" class="img-responsive">
+        </div>
+        <div class="col-sm-4 head-img">
+            <img src="image/image2.jpg" alt="pic2" class="img-responsive">
+        </div>
+        <div class="col-sm-4">
+            <img src="image/image3.webp" alt="pic3" class="img-responsive">
+        </div>
+    </div>
+
+
+    <!-- ============================ -->
+
+    <div class="row">
+        <div class="partition">
+            <div class="promiseDesktop hidden-sm hidden-xs">
+                <a href="#">
+                    <img src="image/OurStoryHomepageBanner1.jpg" class="img-responsive" alt="Our Story"
+                        title="Our Story">
+                </a>
+            </div>
+            <div class="promiseMobile visible-xs visible-sm">
+                <div>
+                    <a href="#">
+                        <img src="image/OurStoryMobile_L.webp" class="img-responsive" alt="Our Story" title="Our Story">
+                    </a>
+                </div>
+                <div>
+                    <a href="#">
+                        <img src="image/OurStoryMobile_R.webp" class="img-responsive" alt="Our Story" title="Our Story">
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="partition">
+            <h2 class="heading1 text-center">Canine Know-How. Feline Facts.</h2>
+            <p class="heading2 text-center">All-Around Pet Answers.</p>
+            <p class="content text-center">When your dog won't stop whining or your cat won't stop scratching, find the
+                right answers that will put your mind (and your heart) at ease.</p>
+            <div class="col-sm-12 col-xs-12 padding-length">
+
+                <!--Image1-->
+                <div class="col-sm-3 col-md-3 col-xs-12">
+                    <a href="#">
+                        <div id="img_wrapper">
+                            <img class="img-responsive" alt="Car Sickness In Dogs: Causes, Symptoms, & Treatments"
+                                title="Car Sickness In Dogs: Causes, Symptoms, & Treatments"
+                                src="image/white-dog-car.webp">
+                        </div>
+                        <span alt="Car Sickness In Dogs: Causes, Symptoms, & Treatments"
+                            title="Car Sickness In Dogs: Causes, Symptoms, & Treatments"></span>
+                    </a>
+                    <div class="display-name"><a alt="displayName" href="#">Car Sickness In Dogs: Causes, Symptoms, &
+                            Treatments</a></div>
+                </div>
+
+                <!--Image2-->
+                <div class="col-sm-3 col-md-3 col-xs-12">
+
+                    <a href="#">
+                        <div id="img__wrapper">
+                            <img class="img-responsive" alt="Do Cats Love Humans?" title="Do Cats Love Humans?"
+                                src="image/brown-cat.webp">
+                        </div>
+                        <span alt="Do Cats Love Humans?" title="Do Cats Love Humans?"></span>
+                    </a>
+                    <div class="display-name"><a alt="displayName" href="#">Do Cats Love Humans?</a></div>
+                </div>
+
+                <!--Image3-->
+                <div class="col-sm-3 col-md-3 col-xs-12">
+                    <a href="#">
+                        <div id="img_wrapper"><img class="img-responsive"
+                                alt="How to Prepare Your Pet for Post-Pandemic Return To Work"
+                                title="How to Prepare Your Pet for Post-Pandemic Return To Work"
+                                src="image/dogs-cat.webp"></div>
+                        <span alt="How to Prepare Your Pet for Post-Pandemic Return To Work"
+                            title="How to Prepare Your Pet for Post-Pandemic Return To Work"></span>
+                    </a>
+                    <div class="display-name"><a alt="displayName" href="#">How to Prepare Your Pet for Post-Pandemic
+                            Return To Work</a></div>
+                </div>
+
+                <!--Image4-->
+                <div class="col-sm-3 col-md-3 col-xs-12">
+                    <a href="#">
+                        <div id="img__wrapper">
+                            <img class="img-responsive" alt="Properly Storing Dry Pet Food"
+                                title="Properly Storing Dry Pet Food" src="image/brown-dog.webp">
+                        </div>
+                        <span class="overlay" alt="Properly Storing Dry Pet Food"
+                            title="Properly Storing Dry Pet Food"></span>
+                    </a>
+                    <div class="display-name">
+                        <a alt="displayName" href="#">Properly Storing Dry Pet Food</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="partition">
+            <div align="center">
+                <table class="categoryTable">
+                    <caption id="tableHead">Shop Our Popular Categories</caption>
+                    <thead>
+                        <tr>
+                            <td>Dogs</td>
+                            <td>Cats</td>
+                            <td>Replacement Parts</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <a href="#" class="blackColor">Dog Accessories</a>
+                            </td>
+                            <td><a href="#" class="blackColor">Accessories For Cats</a></td>
+                            <td><a href="#" class="blackColor">All Replacement Parts</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#" class="blackColor">Dog Bedding</a></td>
+                            <td><a href="#" class="blackColor">Cat Beds</a></td>
+                            <td><a href="#" class="blackColor">Feeding & Watering Replacement Parts</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#" class="blackColor">Dog Collars & Leashes</a></td>
+                            <td><a href="#" class="blackColor">Cat Collars & Leashes</a></td>
+                            <td><a href="#" class="blackColor">Kennel & Carrier Replacement Parts</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#" class="blackColor">Feeding & Watering</a></td>
+                            <td><a href="#" class="blackColor">Feeding & Watering For Cats</a></td>
+                            <td><a href="#" class="blackColor">Litter Pan Replacement Parts</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#" class="blackColor">Grooming Accessories For Dogs</a></td>
+                            <td><a href="#" class="blackColor">Cat Grooming Supplies</a></td>
+                            <td><a href="#" class="blackColor">Shelter Replacement Parts</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#" class="blackColor">Dog Kennels</a></td>
+                            <td><a href="#" class="blackColor">Cat Kennels & Carriers</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#" class="blackColor">Shelters For Dogs</a></td>
+                            <td><a href="#" class="blackColor">Top Cat Shelters</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#" class="blackColor">Popular Dog Toys</a></td>
+                            <td><a href="#" class="blackColor">Cat Toys</a></td>
+                        </tr>
+
+                        <tr>
+                            <td><a href="#" class="blackColor">Travel Accessories For Dog Owners</a></td>
+                            <td><a href="#" class="blackColor">Travel Accessories For Cat Owners</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================ -->
+
+    <!-- Petmet Footer widget code -->
+    <div class="row">
+        <footer class="footer">
+            <!-- Signup footer code Started -->
+            <div class="signUpFooter">
+                <div class="signup-content">
+                    <h4 class="perkstxt">Petmate Perks</h4>
+                    <p class="signuptxt">Sign up for our list to be the first to receive pawsome deals and pet-parent
+                        tips*.</p>
+                    <div id="sign-up">
+                        <div class="container-fluid">
+                            <i class="fa fa-envelope" id="envelope-icon" aria-hidden="true"></i>
+                        </div>
+
+                        <a href="#" data-toggle="modal" data-target="#emailSignupModal" class="modalBtn hide"></a>
+                        <span class="submit-btn submitMail">SUBMIT</span><span class="right-arrow"></span>
+                        <input data-bind="validatableValue: Email" id="emailSignUp" type="text" class="form-control"
+                            placeholder="Email Address" value="" data-emailcapturepoint="Email input by ID">
+
+                    </div>
+                    <p class="text-danger" data-bind="validationMessage: Email" style="display: none;"></p>
+                    <p class="disclaimer">*Your email will be entered into the Petmate mailing list. <br>You may
+                        unsubscribe at
+                        any time</p>
+                </div>
+            </div>
+            <!-- Signup footer code ended -->
+            <div class="menuListFooter">
+                <div class="footer-menu-wrapper">
+                    <div class="footer-menu-container">
+                        <div class="col-sm-12 footer-center-content hidden-xs hidden-sm hidden-md">
+                            <div class="col-sm-2 nopadding">
+                                <h4 class="title-txt">Shop By</h4>
+                                <ul class="footer-menu">
+                                    <li class="footer-menu-item"><a data-bind="ccLink: {route: '/category/dogs'}"
+                                            href="/category/dogs">Dogs</a></li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: {route: '/category/cats'}"
+                                            href="/category/cats">Cats</a></li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: {route: '/category/birds'}"
+                                            href="/category/birds">Birds</a></li>
+                                    <li class="footer-menu-item"><a
+                                            data-bind="ccLink: {route: '/category/L1-replacement-parts'}"
+                                            href="/category/L1-replacement-parts">Replacement Parts</a></li>
+                                    <li class="footer-menu-item"><a
+                                            data-bind="ccLink: {route: '/category/petmate-brands'}"
+                                            href="/category/petmate-brands">Brands</a></li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: {route: '/category/giftGuides'}"
+                                            href="/category/giftGuides">Gift Guides</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-sm-2 ">
+                                <h4 class="title-txt">Support</h4>
+                                <ul class="footer-menu">
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'ContactUs'"
+                                            href="/ContactUs">Contact Us</a>
+                                    </li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'storelocator'"
+                                            href="/storelocator">Where To
+                                            Buy</a></li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'returns'" href="/returns">Return
+                                            Policy</a></li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'shipping'"
+                                            href="/shipping">Shipping Policy</a>
+                                    </li>
+                                    <li class="footer-menu-item"><a
+                                            data-bind="ccLink : {route : '/internationalShipping'}"
+                                            href="/internationalShipping">International Shipping</a></li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'faq'" href="/faq">FAQS</a></li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'SiteMap'" href="/SiteMap">Site
+                                            Map</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="col-sm-2 ">
+                                <h4 class="title-txt">Company</h4>
+                                <ul class="footer-menu">
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'ourstory'" href="/ourstory">Our
+                                            Story</a></li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'careers'"
+                                            href="/careers">Careers</a></li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'Affiliates'"
+                                            href="/Affiliates">Affiliates</a>
+                                    </li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'media'" href="/media">Media</a>
+                                    </li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'adoptapet'"
+                                            href="/adoptapet">Adopt A Pet</a>
+                                    </li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'petsustainability'"
+                                            href="/petsustainability">Pet
+                                            Sustainability Coalition</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-2 ">
+                                <h4 class="title-txt">Account</h4>
+                                <ul class="footer-menu">
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'login'" href="/login">Log In</a>
+                                    </li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'createaccount'"
+                                            href="/createaccount">Create
+                                            Account</a></li>
+                                    <li class="footer-menu-item"><a data-bind="ccLink: 'orderhistoryanonymous'"
+                                            href="/orderhistoryanonymous">Order Status</a></li>
+
+                                </ul>
+                            </div>
+
+                            <!-- Social media icon code -->
+                            <div class="col-sm-4  social-media-icon-wrapper">
+                                <div class="logo-image">
+                                    <a data-bind="ccLink: 'home'" href="#">
+                                        <div id="cc_img__resize_wrapper" style="max-width: 100%; min-height: 0px; ">
+                                            <img id="logoFoot" alt="Petmate" title="Petmate"
+                                                src="image/PetRedesign_logo_white.png" &amp;height="45"
+                                                &amp;width="120">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="social-icons">
+                                    <ul class="social-icon-menu">
+                                        <li class="social-icon-item"><a alt="Facebook" title="Facebook" href="#"
+                                                target="_blank" class="facebook_icon">
+                                            </a></li>
+                                        <li class="social-icon-item"><a alt="Twitter" title="Twitter" href="#"
+                                                target="_blank" class="twitter-icon"></a></li>
+                                        <li class="social-icon-item"><a alt="Instagram" title="Instagram" href="#"
+                                                target="_blank" class="instagram-icon"></a></li>
+                                        <li class="social-icon-item"><a alt="Pinterest" title="Pinterest" href="#"
+                                                target="_blank" class="pinteret-icon"></a></li>
+                                        <li class="social-icon-item"><a alt="Youtube" title="Youtube" href="#"
+                                                target="_blank" class="youtube-icon"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Accordion footer menu code for mobile view start here-->
+                        <div class="col-sm-12  visible-md visible-xs visible-sm" id="accordion">
+                            <div class="mobileMenuWrapper">
+                                <div class="menuContainer ">
+                                    <h4 class="title-txt">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse"
+                                            data-parent="#accordion" href="#collapseOne">
+                                            <span>Shop By</span>
+                                            <span class=mobileMenuPlus><i class="fa fa-plus mobileMenuPlus"></i></span>
+                                            <span class=mobileMenuMinus><i
+                                                    class="fa fa-minus mobileMenuMinus"></i></span>
+                                        </a>
+                                    </h4>
+                                    <ul class="footer-menu panel-body panel-collapse collapse" id="collapseOne">
+                                        <li class="footer-menu-item"><a data-bind="ccLink: {route: '/category/dogs'}"
+                                                href="/category/dogs">Dogs</a></li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: {route: '/category/cats'}"
+                                                href="/category/cats">Cats</a></li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: {route: '/category/birds'}"
+                                                href="/category/birds">Birds</a>
+                                        </li>
+                                        <li class="footer-menu-item"><a
+                                                data-bind="ccLink: {route: '/category/L1-replacement-parts'}"
+                                                href="/category/L1-replacement-parts">Replacement Parts</a></li>
+                                        <li class="footer-menu-item"><a
+                                                data-bind="ccLink: {route: '/category/petmate-brands'}"
+                                                href="/category/petmate-brands">Brands</a></li>
+                                        <li class="footer-menu-item"><a
+                                                data-bind="ccLink: {route: '/category/giftGuides'}"
+                                                href="/category/giftGuides">Gift Guides</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="menuContainer">
+                                    <h4 class="title-txt">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse"
+                                            data-parent="#accordion" href="#collapsetwo">
+                                            <span>Support</span>
+                                            <span class=mobileMenuPlus><i class="fa fa-plus"></i></span>
+                                            <span class=mobileMenuMinus><i class="fa fa-minus"></i></span>
+                                        </a>
+                                    </h4>
+                                    <ul class="footer-menu panel-body panel-collapse collapse" id="collapsetwo">
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'ContactUs'"
+                                                href="/ContactUs">Contact Us</a>
+                                        </li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'storelocator'"
+                                                href="/storelocator">Where To
+                                                Buy</a></li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'returns'"
+                                                href="/returns">Return Policy</a></li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'shipping'"
+                                                href="/shipping">Shipping Policy</a>
+                                        </li>
+                                        <li class="footer-menu-item"><a
+                                                data-bind="ccLink : {route : '/internationalShipping'}"
+                                                href="/internationalShipping">International Shipping</a></li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'faq'" href="/faq">FAQS</a>
+                                        </li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'SiteMap'"
+                                                href="/SiteMap">Site Map</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="menuContainer">
+                                    <h4 class="title-txt">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse"
+                                            data-parent="#accordion" href="#collapsethree">
+                                            <span> Company</span>
+                                            <span class=mobileMenuPlus><i class="fa fa-plus"></i></span>
+                                            <span class=mobileMenuMinus><i class="fa fa-minus"></i></span>
+                                        </a>
+                                    </h4>
+                                    <ul class="footer-menu panel-body panel-collapse collapse" id="collapsethree">
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'ourstory'"
+                                                href="/ourstory">Our Story</a></li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'careers'"
+                                                href="/careers">Careers</a></li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'Affiliates'"
+                                                href="/Affiliates">Affiliates</a>
+                                        </li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'media'"
+                                                href="/media">Media</a></li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'adoptapet'"
+                                                href="/adoptapet">Adopt A Pet</a>
+                                        </li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'petsustainability'"
+                                                href="/petsustainability">Pet
+                                                Sustainability Coalition</a></li>
+                                    </ul>
+                                </div>
+
+                                <div class="menuContainer">
+                                    <h4 class="title-txt">
+                                        <a class="accordion-toggle collapsed" data-toggle="collapse"
+                                            data-parent="#accordion" href="#collapsefour">
+                                            <span> Account </span>
+                                            <span class=mobileMenuPlus><i class="fa fa-plus"></i></span>
+                                            <span class=mobileMenuMinus><i class="fa fa-minus"></i></span>
+                                        </a>
+                                    </h4>
+                                    <ul class="footer-menu panel-body panel-collapse collapse" id="collapsefour">
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'login'" href="/login">Log
+                                                In</a></li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'createaccount'"
+                                                href="/createaccount">Create
+                                                Account</a></li>
+                                        <li class="footer-menu-item"><a data-bind="ccLink: 'orderhistoryanonymous'"
+                                                href="/orderhistoryanonymous">Order
+                                                Status</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Social Icon code for mobile view -->
+                            <div class="col-sm-12  social-media-icon-wrapper">
+                                <div class="logo-image">
+                                    <a data-bind="ccLink: 'home'" href="#">
+                                        <div id="cc_img__resize_wrapper" style="max-width: 100%; min-height: 0px; ">
+                                            <img id="logoFoot" alt="Petmate" title="Petmate"
+                                                src="image/PetRedesign_logo_white.png" &amp;height="45"
+                                                &amp;width="120">
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="social-icons">
+                                    <ul class="social-icon-menu">
+                                        <li class="social-icon-item"><a alt="Facebook" title="Facebook" href="#"
+                                                target="_blank" class="facebook_icon">
+
+                                            </a></li>
+                                        <li class="social-icon-item"><a alt="Twitter" title="Twitter" href="#"
+                                                target="_blank" class="twitter-icon"></a></li>
+                                        <li class="social-icon-item"><a alt="Instagram" title="Instagram" href="#"
+                                                target="_blank" class="instagram-icon"></a></li>
+                                        <li class="social-icon-item"><a alt="Pinterest" title="Pinterest" href="#"
+                                                target="_blank" class="pinteret-icon"></a></li>
+                                        <li class="social-icon-item"><a alt="Youtube" title="Youtube" href="#"
+                                                target="_blank" class="youtube-icon"></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--  Accordion footer menu code for mobile view end here-->
+                        <!--Terms and policy code for dekstop  -->
+                        <div class="col-xs-12  termsAndpolicy hidden-xs hidden-sm" id="terms-and-policy-section">
+                            <div class="policy-txt col-xs-12  col-md-10">
+                                <ul class="pet-terms">
+                                    <li class="pet-terms-menu"><a data-bind="ccLink: 'termsandconditions'"
+                                            href="/termsandconditions">Terms of use</a></li>
+                                    <li class="pet-terms-menu"><a data-bind="ccLink: 'privacy'" href="/privacy">Privacy
+                                            Policy</a></li>
+                                    <li class="pet-terms-menu"><a data-bind="ccLink: 'Accessibility'"
+                                            href="/Accessibility">Accessibility
+                                            Statement</a></li>
+                                    <li class="pet-terms-menu"><span class="footer-copyrights">© 2021 Doskocil
+                                            Manufacturing Company,
+                                            Inc.
+                                            dba Petmate</span></li>
+                                </ul>
+                            </div>
+                            <div class="norton-logo col-xs-12  col-md-2">
+                                <a href="https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf/splash.fdf&amp;dn=www.petmate.com&amp;lang=en"
+                                    target="popup"
+                                    onclick="window.open('https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf/splash.fdf&amp;dn=www.petmate.com&amp;lang=en','popup','width=600,height=600'); return false;"
+                                    style="color:#ffffff; text-decoration:none; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">
+                                    <img class="resize" name="seal" src="image/footer-norton.png" alt="Norton SECURED"
+                                        title="Norton SECURED">
+                                </a>
+                            </div>
+
+                        </div>
+                        <!-- terms and policy code for mobile view start here -->
+                        <div class="col-xs-12 visible-sm visible-xs " id="terms-and-policy-section-mobile">
+                            <div class="policy-txt col-xs-12  col-md-10">
+                                <ul class="pet-terms">
+                                    <li class="pet-terms-menu"><a id="a1" data-bind="ccLink: 'termsandconditions'"
+                                            href="/termsandconditions">Terms of use</a></li>
+                                    <li class="pet-terms-menu"><a id="a2" data-bind="ccLink: 'privacy'"
+                                            href="/privacy">Privacy
+                                            Policy</a></li>
+                                    <li class="pet-terms-menu"><a id="a3" data-bind="ccLink: 'Accessibility'"
+                                            href="/Accessibility">Accessibility
+                                            Statement</a></li>
+                                    <li class="pet-terms-menu"><span class="footer-copyrights">© 2021 Doskocil
+                                            Manufacturing Company,
+                                            Inc.
+                                            dba Petmate</span></li>
+                                </ul>
+                            </div>
+                            <div class="norton-logo col-xs-12  col-md-2">
+                                <a href="https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf/splash.fdf&amp;dn=www.petmate.com&amp;lang=en"
+                                    target="popup"
+                                    onclick="window.open('https://trustsealinfo.websecurity.norton.com/splash?form_file=fdf/splash.fdf&amp;dn=www.petmate.com&amp;lang=en','popup','width=600,height=600'); return false;"
+                                    style="color:#ffffff; text-decoration:none; letter-spacing:.5px; text-align:center; margin:0px; padding:0px;">
+                                    <img class="resize" name="seal" src="image/footer-norton.png" alt="Norton SECURED"
+                                        title="Norton SECURED">
+                                </a>
+                            </div>
+                        </div>
+                        <!-- terms and policy code for mobile view end here -->
+                    </div>
+                </div>
+        </footer>
+    </div>
+</body>
+
+</html>
